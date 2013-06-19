@@ -1,7 +1,31 @@
-@(message: String)
+@(actualites: List[Actualite], disciplines: List[Discipline],
+professeurs: List[Professeur]) 
 
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message, style = "Java")
-    
+@main("Oriental Studio") {
+
+<div class="actualites">
+	<ol>
+		<li><span>Infos pratique</span></li>		
+		<li><span>Cours et stages</span></li>		
+		<li><span>Professeurs</span></li>
+	</ol>
+</div>
+<div>
+	<h1>Oriental Studio</h1>
+</div>
+<div>
+	<div>
+		<h2>Actualités</h2>
+		<article>
+			<ul class="list">
+			@for(actualite<-actualites){
+				<li >
+					<span>@actualite.description</span>
+				</li>
+				}
+			</ul>
+		</article>
+
+	</div>
+</div>
 }

@@ -1,0 +1,96 @@
+#Actualite
+
+- !!models.Actualite
+    id: 1
+    date: 2013-06-12
+    description: Spectacle de fin d'annee prevu le 23 juin
+    active: true
+
+- !!models.Actualite
+    id: 2
+    date: 2013-05-31
+    description: Prochain stage de danse orientale le 09 juin
+    active: false
+
+# Discipline
+
+
+
+- &orientale !!models.Discipline
+    nom:      Danse Orientale
+    description:  Danse orientale tribale
+    
+- &classique !!models.Discipline
+    nom:      Danse classique
+    description:  Danse classique pour adultes
+    
+- &modern !!models.Discipline
+    nom:      Danse Modern-jazz
+    description:  Danse Modern-jazz
+    
+- &barre !!models.Discipline
+    nom:      Barre au sol  
+    description:  Exercices de barre au sol, au choix classique ou jazz
+   
+# Professeur
+
+
+    
+- &amana !!models.Professeur
+    nom:      Amana
+    parcoursPro:       Professeur de danse orientale depuis 15 ans
+    urlAvatar:     photoAmana
+                        
+- &christian !!models.Professeur
+    nom:      Christian
+    parcoursPro:       Professeur de danse classique depuis 10 ans
+    urlAvatar:     photoChristian
+
+- &hanae !!models.Professeur
+    nom:      Hanae
+    parcoursPro:       Jeune professeur de danse classique 
+    urlAvatar:     photoHanae
+
+- &cathy !!models.Professeur
+    nom:      Cathy
+    parcoursPro:       Professeur de danse modern Jazz et barre au sol depuis 15 ans
+    urlAvatar:     photoCathy
+
+# Cours
+
+
+
+- !!models.Cours
+    plageHoraire:
+    dureeEnMinutes:  60
+    discipline: *orientale
+    professeur: *amana
+
+- !!models.Cours
+    plageHoraire:
+    dureeEnMinutes:  60
+    discipline: *modern
+    professeur: *cathy
+                
+- !!models.Cours
+    plageHoraire:
+    dureeEnMinutes:  60
+    discipline: *classique
+    professeur: *christian
+
+- !!models.Cours
+    plageHoraire:
+    dureeEnMinutes:  180
+    discipline: *orientale
+    professeur: *amana
+                
+- !!models.Cours
+    plageHoraire:
+    dureeEnMinutes:  180
+    discipline: *classique
+    professeur: *hanae
+            
+    
+                
+
+            

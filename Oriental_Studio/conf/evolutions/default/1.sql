@@ -3,6 +3,14 @@
 
 # --- !Ups
 
+create table actualite (
+  id                        integer not null,
+  date                      timestamp,
+  description               varchar(255),
+  active                    boolean,
+  constraint pk_actualite primary key (id))
+;
+
 create table carte (
   nom                       varchar(255) not null,
   forfait_cours             float,
@@ -36,6 +44,8 @@ create table professeur (
   constraint pk_professeur primary key (nom))
 ;
 
+create sequence actualite_seq;
+
 create sequence carte_seq;
 
 create sequence cours_seq;
@@ -57,6 +67,8 @@ create index ix_cours_professeur_2 on cours (professeur_nom);
 
 SET REFERENTIAL_INTEGRITY FALSE;
 
+drop table if exists actualite;
+
 drop table if exists carte;
 
 drop table if exists cours;
@@ -68,6 +80,8 @@ drop table if exists inscrit_newsletter;
 drop table if exists professeur;
 
 SET REFERENTIAL_INTEGRITY TRUE;
+
+drop sequence if exists actualite_seq;
 
 drop sequence if exists carte_seq;
 

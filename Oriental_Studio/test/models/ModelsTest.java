@@ -43,4 +43,16 @@ public class ModelsTest extends WithApplication {
 		Assertions.assertThat(coursParDiscipline).contains(cours);
 	}
 	
+	@Test
+	public void findActualiteActive(){
+		Actualite actualite1 = new Actualite(Calendar.getInstance().getTime(), "Le spectacle de fin d'année aura lieu le 23 juin", true);
+		Actualite actualite2 = new Actualite(Calendar.getInstance().getTime(), "Prochain stage de danse orientale le 9 juin", false);
+		actualite1.save();
+		actualite2.save();
+		List<Actualite> listActualiteActive = Actualite.findActualiteActive(true);
+		Assertions.assertThat(listActualiteActive).contains(actualite1);
+		Assertions.assertThat(actualite2).isNotIn(listActualiteActive);
+		
+	}
+	
 }
