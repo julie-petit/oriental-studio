@@ -1,7 +1,41 @@
-@(message: String)
+@(actualites: List[Actualite], disciplines: List[Discipline],
+professeurs: List[Professeur]) 
 
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message, style = "Java")
-    
+@main("Oriental Studio") {
+
+<div class="menu">
+	<ol>
+		<li><span>Infos pratique</span></li>		
+		<li><span>Cours et stages</span></li>		
+		<li><span>Professeurs</span></li>
+	</ol>
+</div>
+<div>
+	<h1>Oriental Studio</h1>
+</div>
+<div class="corps">
+	<div class="actualites">
+		<h2>Actualités</h2>
+		<article>
+			<ul class="list">
+			@for(actualite<-actualites){
+				<li >
+					<span>@actualite.description</span>
+				</li>
+				}
+			</ul>
+		</article>
+
+	</div>
+	<div>
+		<h2>Découvrez Oriental Studio</h2>
+		<p>
+		Oriental Studio est une école de danse conviviale où danseurs débutants et confirmés sont les 
+		bienvenus. Nos professeurs sont d'anciens danseurs professionnels ayant appartenus à des troupes
+		presitgieuses (plus de détails via le menu Professeurs). Nous dispensons des cours pour adultes 
+		et enfants en danse orientale, modern-jazz, danse classique et barre au sol.
+		</p>
+		<iframe width="640" height="360" src="http://www.youtube.com/embed/MBa_a9Jxlcw?feature=player_embedded" frameborder="0" allowfullscreen/>		
+	</div>
+</div>
 }

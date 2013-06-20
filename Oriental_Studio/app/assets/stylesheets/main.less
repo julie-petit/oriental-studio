@@ -1,35 +1,38 @@
 // -----------------------------------
 // MAIN
 // -----------------------------------
-// author: mda@zenexity.com - 2011
-// -----------------------------------
-
-@import 'libs/_reset.less';
-@import 'libs/_mate.less';
-@import 'libs/_theme.less';
 
 // ----------------------- MAIN STYLES
-body {
-    background: @mainBackground;
-    color: @mainColor;
-    font: @defaultFont;
-    -webkit-font-smoothing: antialised;
-    -webkit-user-select: none;
-}
-
-a {
-    color: @links;
-    text-decoration: none;
-    &:hover {
-        color: @linksHover;
+.menu{
+	background: #000b15;
+	color: #fff;
+	display: block;
+	float: left;
+	padding: 0 7px;
+	border-left: 1px solid #626a72;
+	border-right: 1px solid #16212c;
+	 ol{
+	 	display: inline-block;
+    }
+    li {
+        position: relative;
+        padding: 10px 5px 5px 25px;
+        text-decoration: none;    
+        
     }
 }
+.corps {
+	display: inline-block;
+}
 
-// --------------------------- IMPORTS
-@import 'main/_layout.less';        // General grid
-@import 'main/_widgets.less';       // Some shared elements
-@import 'main/_drawer.less';        // Project drawer
-@import 'main/_header.less';        // Top header + User bar
-@import 'main/_breadcrumb.less';    // Breadcrumb + App menu
-@import 'apps/_tasks.less';         // Tasks 
-
+.actualites {
+    ol{
+    	display: inline-block;
+    }
+    li {
+        position: relative;
+        padding: 10px 5px 5px 25px;
+        text-decoration: none;    
+        
+    }
+}
