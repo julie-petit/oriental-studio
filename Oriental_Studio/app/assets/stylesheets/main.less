@@ -3,22 +3,22 @@
 // -----------------------------------
 
 // ----------------------- MAIN STYLES
+#table{
+	display: inline-table;
+}
 .menu{
 	background: #000b15;
 	color: #fff;
-	display: block;
-	float: left;
-	padding: 0 7px;
-	border-left: 1px solid #626a72;
-	border-right: 1px solid #16212c;
-	 ol{
-	 	display: inline-block;
+	font:15px bold Lucida,sans-serif;
+	padding-bottom:5px;
+	ul{
+	 	display: inline;
+	 	list-style-type:none;	 	
     }
     li {
-        position: relative;
-        padding: 10px 5px 5px 25px;
-        text-decoration: none;    
-        
+       float: left;  
+       border-right: #fff thin;  
+       padding: 5px;
     }
 }
 .corps {
@@ -26,13 +26,13 @@
 }
 
 .actualites {
-    ol{
+    ul{
     	display: inline-block;
+    	list-style-type:none;
     }
     li {
         position: relative;
         padding: 10px 5px 5px 25px;
-        text-decoration: none;    
         
     }
 }
